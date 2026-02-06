@@ -1,0 +1,333 @@
+/* --- Container Utama --- */
+.container {
+  padding: 3rem 2rem;
+  background-color: #f8fafc; /* Slate 50 */
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* --- Action Bar (Navigation) --- */
+.actionBar {
+  max-width: 850px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnBack {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #475569;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnBack:hover {
+  background: #f1f5f9;
+  transform: translateX(-4px);
+}
+
+.btnPrint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #00235b; /* Navy */
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 35, 91, 0.15);
+}
+
+.btnPrint:hover {
+  background: #001a44;
+  transform: translateY(-2px);
+}
+
+/* --- Payslip Card (Main Document) --- */
+.payslipCard {
+  max-width: 850px;
+  margin: 0 auto;
+  background: white;
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+}
+
+/* --- Header Section --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.companyInfo h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0;
+  color: #00235b;
+  text-transform: uppercase;
+}
+
+.companyInfo p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 6px 0 0;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.slipLabel {
+  text-align: right;
+}
+
+.slipLabel h2 {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.periodText {
+  display: block;
+  margin-top: 5px;
+  font-weight: 700;
+  color: #3b82f6;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.divider {
+  border: 0;
+  border-top: 2px solid #f1f5f9;
+  margin: 2rem 0;
+}
+
+/* --- Info Grid --- */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.infoItem label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.infoItem p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* --- Attendance Summary --- */
+.attendanceSummary {
+  background: #f8fafc;
+  padding: 1.25rem 2rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  border: 1px solid #f1f5f9;
+}
+
+.attItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.attItem strong {
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+/* --- Calculation Grid --- */
+.calculationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.calcColumn h3 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f1f5f9;
+  margin-bottom: 1.25rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.subDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.subDetail small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.totalRowBruto, .totalRowPotongan {
+  font-weight: 800;
+  border-top: 2px dashed #f1f5f9;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.textRed {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* --- Net Salary Section --- */
+.netSalarySection {
+  background: #00235b;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.netBox p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.8;
+  letter-spacing: 2px;
+}
+
+.netBox h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0.75rem 0 0;
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.electronicNote {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.printDate {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+}
+
+/* --- PRINT LOGIC --- */
+@media print {
+  .noPrint {
+    display: none !important;
+  }
+  
+  .container {
+    padding: 0;
+    background: white;
+  }
+  
+  .payslipCard {
+    box-shadow: none;
+    border: none;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .netSalarySection {
+    background: #00235b !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+.btnGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.btnDownload {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #00235b;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnDownload:hover {
+  background-color: #00153a;
+}
+
+@media print {
+  .noPrint {
+    display: none !important;
+  }
+  .container {
+    padding: 0;
+    background: white;
+  }
+  .payslipCard {
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+  }
+}

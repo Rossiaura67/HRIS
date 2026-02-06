@@ -1,0 +1,157 @@
+/* --- BASE CONTAINER --- */
+.container { 
+  padding: 20px; /* Dikurangi sedikit untuk mobile */
+  background: #f8fafc; 
+  min-height: 100vh; 
+  max-width: 1200px; /* Menjaga agar tidak terlalu lebar di monitor besar */
+  margin: 0 auto;
+}
+
+/* --- HEADER SECTION --- */
+.header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+/* Responsif Header: Tumpuk vertikal di Mobile */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.titleGroup h1 { 
+  font-size: clamp(18px, 5vw, 24px); /* Font menyesuaikan layar */
+  font-weight: 800; 
+  color: #1e293b; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  margin: 0; 
+}
+
+.titleGroup p { color: #64748b; font-size: 14px; margin: 5px 0 0 0; }
+
+.searchBox {
+  background: white; 
+  border: 1.5px solid #e2e8f0; 
+  padding: 10px 15px;
+  border-radius: 4px; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  width: 350px; /* Desktop width */
+  transition: border-color 0.3s;
+}
+
+.searchBox:focus-within { border-color: #0a224a; }
+
+/* Responsif SearchBox: Full width di Mobile */
+@media (max-width: 768px) {
+  .searchBox {
+    width: 100%;
+  }
+}
+
+.searchBox input { border: none; outline: none; width: 100%; font-size: 14px; }
+
+/* --- TIMELINE & CARDS --- */
+.timeline { display: flex; flex-direction: column; gap: 15px; }
+
+.logCard { 
+  background: white; 
+  border-radius: 4px; 
+  border: 1.5px solid #e2e8f0; 
+  display: flex; 
+  overflow: hidden; 
+}
+
+/* Responsif LogCard: Sidebar pindah ke atas di Mobile */
+@media (max-width: 600px) {
+  .logCard {
+    flex-direction: column;
+  }
+}
+
+.logSidebar {
+  background: #f1f5f9; 
+  width: 100px; /* Desktop */
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  border-right: 1px solid #e2e8f0; 
+  padding: 15px;
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .logSidebar {
+    width: 100%;
+    flex-direction: row; /* Horizontal di mobile */
+    justify-content: flex-start;
+    gap: 15px;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 20px;
+  }
+}
+
+.dateText { font-weight: 800; color: #1e293b; font-size: 13px; margin-top: 5px; }
+@media (max-width: 600px) { .dateText { margin-top: 0; } }
+
+.timeText { font-size: 11px; opacity: 0.8; }
+
+/* --- CONTENT AREA --- */
+.logContent { padding: 20px; flex: 1; min-width: 0; /* Hindari overflow teks */}
+
+.logHeader { 
+  display: flex; 
+  gap: 10px; 
+  align-items: center; 
+  margin-bottom: 10px; 
+  flex-wrap: wrap; /* Biar badge gak maksa satu baris di HP kecil */
+}
+
+.badge { font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; white-space: nowrap; }
+.success { background: #dcfce7; color: #15803d; }
+.danger { background: #fee2e2; color: #b91c1c; }
+.warning { background: #fef3c7; color: #92400e; }
+.info { background: #dee9ff; color: #0a224a; }
+
+.target { font-size: 12px; color: #64748b; display: flex; align-items: center; gap: 5px; font-weight: 600; }
+
+.details { 
+  font-size: 14px; 
+  color: #334155; 
+  margin-bottom: 15px; 
+  word-break: break-word; /* Biar teks panjang gak ngerusak layout */
+}
+
+/* --- FOOTER / META --- */
+.footer { 
+  display: flex; 
+  gap: 20px; 
+  border-top: 1px solid #f8fafc; 
+  padding-top: 12px; 
+  flex-wrap: wrap; /* Penting untuk mobile */
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #64748b; }
+.companyName { color: #5584b4; font-weight: 700; }
+
+/* --- OTHERS --- */
+.loaderArea { text-align: center; padding: 60px; color: #64748b; }
+.noData { text-align: center; padding: 60px; background: white; border-radius: 4px; border: 1.5px dashed #e2e8f0; margin: 20px 0; }

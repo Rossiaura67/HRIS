@@ -1,0 +1,269 @@
+/* --- Root Variables untuk Konsistensi --- */
+:root {
+  --bg-main: #f8fafc;
+  --white: #ffffff;
+  --border-light: #d1d9e6;
+  --text-dark: #1a1a1a;
+  --text-muted: #64748b;
+  --color-pastel-blue: #E3F2FD; 
+  --color-pastel-blue-dark: #0d47a1;
+  --chart-orange: #FF8A65;
+  --chart-orange-hover: #f4511e;
+  --success-green: #2e7d32;
+}
+
+.container {
+  padding: 25px;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.title { 
+  font-size: 24px; 
+  font-weight: 800; 
+  color: #1e293b; 
+  margin: 0;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  background: #f1f5f9;
+  color: var(--text-dark);
+}
+
+/* Layout Grid */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  align-items: start;
+}
+
+.formCard {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Fields & Inputs */
+.field { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  margin-bottom: 20px; 
+}
+
+.field label { 
+  font-size: 13px; 
+  font-weight: 700; 
+  color: var(--text-muted); 
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon, .currencyPrefix {
+  position: absolute;
+  left: 15px;
+  font-weight: 700;
+  color: #94a3b8;
+  z-index: 2;
+}
+
+.currencyPrefix {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 12px 15px 12px 45px; /* Memberi ruang untuk icon/prefix */
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fcfcfc;
+}
+
+.inputWrapper input:focus {
+  border-color: var(--chart-orange);
+  background-color: var(--white);
+  box-shadow: 0 0 0 4px rgba(255, 138, 101, 0.1);
+}
+
+/* Action Button */
+.saveBtn {
+  width: 100%;
+  padding: 15px;
+  background: var(--chart-orange);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 138, 101, 0.2);
+}
+
+.saveBtn:hover { 
+  background: var(--chart-orange-hover); 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(255, 138, 101, 0.3);
+}
+
+.saveBtn:disabled { 
+  background: #cbd5e1; 
+  cursor: not-allowed; 
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- Preview Card (Sisi Kanan) --- */
+.previewCard {
+  background-color: var(--color-total);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #bbdefb;
+  position: sticky;
+  top: 25px;
+}
+
+.previewTitle { 
+  font-size: 16px; 
+  font-weight: 800; 
+  color: var(--color-pastel-blue-dark); 
+  margin-bottom: 20px; 
+  margin-top: 0;
+}
+
+.previewItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.previewItem strong {
+  color: var(--color-pastel-blue-dark);
+}
+
+.divider { 
+  border: 0; 
+  border-top: 1.5px dashed #bbdefb; 
+  margin: 15px 0; 
+}
+
+.totalRow { 
+  margin-top: 10px; 
+  font-weight: 800; 
+  border-top: 1px solid rgba(187, 222, 251, 0.5);
+  padding-top: 15px;
+}
+
+.grandTotal { 
+  color: var(--success-green); 
+  font-size: 20px; 
+}
+
+.previewNote {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .formGrid {
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .formGrid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .previewCard { 
+    order: -1; /* Preview muncul di atas form pada tablet/HP untuk feedback instan */
+    position: static;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .fieldGrid { 
+    grid-template-columns: 1fr; 
+    gap: 0;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .formCard {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,128 @@
+/* Menghilangkan margin auto dan membuat background memenuhi seluruh layar */
+.container {
+    padding: 24px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: block; /* Menghilangkan flex center agar tidak mengumpul di tengah */
+}
+
+/* Membuat Card Pengajuan memenuhi lebar layar yang tersedia */
+.formCard {
+    background: white;
+    width: 100%; /* Memenuhi lebar layar */
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.headerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 16px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+}
+
+/* Tetap menjaga lebar input agar tidak terlalu memanjang di layar ultra-wide (opsional) */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%; /* Bisa diubah ke 1200px jika ingin tetap nyaman dibaca di layar sangat lebar */
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form select, .form input, .form textarea {
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%; /* Pastikan input memenuhi barisnya */
+    transition: 0.2s;
+}
+
+.form select:focus, .form input:focus, .form textarea:focus {
+    outline: none;
+    border-color: #00235b;
+    box-shadow: 0 0 0 3px rgba(0, 35, 91, 0.05);
+}
+
+.form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Grid Baris - Start Date & End Date akan tetap bersampingan */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.btnSubmit {
+    background: #00235b;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-size: 1rem;
+    align-self: flex-start; /* Tombol tidak harus melebar penuh jika tidak mau */
+    min-width: 200px;
+}
+
+.btnSubmit:hover {
+    background: #001a44;
+    transform: translateY(-2px);
+}
+
+.btnHistoryLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00235b;
+    background: #f0f7ff;
+    border: 1px solid #dbeafe;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+    .btnSubmit {
+        width: 100%;
+    }
+}

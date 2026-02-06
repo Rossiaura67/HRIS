@@ -1,0 +1,148 @@
+.container {
+  padding: 20px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* --- TABLE CARD --- */
+.tableCard {
+  background: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden; /* Penting untuk menjaga border-radius */
+}
+
+.tableWrapper {
+  overflow-x: auto; /* Memungkinkan scroll horizontal di mobile */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Menjaga tata letak tetap rapi di desktop */
+}
+
+.table th {
+  background-color: #f8fafc;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  font-weight: 700;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #1e293b;
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover {
+  background-color: #fcfcfd;
+}
+
+/* --- STATUS BADGES --- */
+.status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.success {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.failed, .expired {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* --- ACTION BUTTONS --- */
+.btnVerify {
+  background-color: #0a224a;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 8px;
+}
+
+.btnVerify:hover {
+  background-color: #1e3a8a;
+}
+
+.btnInvoice {
+  background-color: white;
+  border: 1.5px solid #e2e8f0;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btnInvoice:hover {
+  border-color: #0a224a;
+  color: #0a224a;
+  background-color: #f8fafc;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .tableCard {
+    border-radius: 4px;
+  }
+}

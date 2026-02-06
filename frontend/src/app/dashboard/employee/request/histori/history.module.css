@@ -1,0 +1,231 @@
+.container {
+    padding: 40px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.titleArea {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.backBtn {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #64748b;
+    display: flex;
+    transition: all 0.2s;
+}
+
+.backBtn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin: 4px 0 0 0;
+}
+
+/* FILTER BOX */
+.filterBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    color: #94a3b8;
+}
+
+.selectFilter {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* TABLE STYLING */
+.tableSection {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.historyTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.historyTable th {
+    background: #f8fafc;
+    padding: 16px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.tableRow {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.2s;
+}
+
+.tableRow:hover {
+    background: #fcfdfe;
+}
+
+.historyTable td {
+    padding: 20px 24px;
+    vertical-align: middle;
+}
+
+.typeCell {
+    max-width: 300px;
+}
+
+.leaveType {
+    font-weight: 700;
+    color: #00235b;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.reasonText {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dateRange {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.dateTo {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-left: 24px;
+}
+
+.durationBadge {
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #334155;
+}
+
+/* STATUS BADGES */
+.statusBadge {
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.pending { background: #fffbeb; color: #92400e; }
+.approved { background: #f0fdf4; color: #166534; }
+.rejected { background: #fef2f2; color: #991b1b; }
+
+.rejectNote {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #991b1b;
+    background: #fff1f2;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-left: 3px solid #f43f5e;
+}
+
+.textCenter { text-align: center; }
+.textMuted { color: #cbd5e1; }
+
+/* LOADING & EMPTY */
+.loadingWrapper {
+    text-align: center;
+    padding: 100px 0;
+    color: #64748b;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #00235b;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.emptyState {
+    text-align: center;
+    padding: 80px 0;
+    background: white;
+    border-radius: 20px;
+    border: 2px dashed #e2e8f0;
+}
+
+.emptyState h3 { margin: 16px 0 8px; color: #1e293b; }
+.emptyState p { color: #64748b; margin-bottom: 24px; }
+
+.btnRequest {
+    background: #00235b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .historyTable thead { display: none; }
+    .historyTable td { display: block; width: 100%; border: none; padding: 10px 24px; }
+    .tableRow { padding: 15px 0; display: block; border-bottom: 8px solid #f8fafc; }
+}

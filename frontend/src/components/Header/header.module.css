@@ -1,0 +1,31 @@
+/* src/components/Header.module.css */
+
+.header {
+  /* HEADER_CLASSES */
+  @apply flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 shadow-sm;
+}
+
+.pageTitle {
+  /* Judul */
+  @apply text-2xl font-semibold text-gray-800;
+}
+
+.searchContainer {
+  /* Search Bar */
+  @apply relative hidden sm:block;
+}
+
+.searchInput {
+  /* SEARCH_INPUT_CLASSES */
+  @apply pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-64;
+}
+
+.notificationButton {
+  /* NOTIFICATION_BUTTON_CLASSES */
+  @apply p-2 rounded-full text-gray-600 hover:bg-gray-100 transition duration-150 relative;
+}
+
+.avatar {
+  /* AVATAR_CLASSES */
+  @apply w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-sm;
+}

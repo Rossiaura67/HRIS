@@ -1,0 +1,197 @@
+.container {
+  padding: 30px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.mainTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  border-radius: 4px;
+  border: 1.5px solid #e2e8f0;
+  overflow: hidden;
+  gap: 0;
+}
+
+/* --- Form Section --- */
+.formSection {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoBadge {
+  background: #dee9ff; /* Pastel Blue dari Dashboard */
+  color: #0a224a;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.readOnlyInput {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* --- Upload Box --- */
+.uploadBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uploadBox label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.dropzone {
+  border: 2px dashed #e2e8f0;
+  border-radius: 4px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dropzone:hover {
+  background: #f8fafc;
+  border-color: #5584b4;
+}
+
+.dropzoneLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.dropzoneLabel p {
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Location Box --- */
+.locationBox {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.locationBox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #5584b4;
+  margin-bottom: 5px;
+}
+
+.addressText {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* --- Map Section --- */
+.mapSection {
+  min-height: 400px;
+  background: #eee;
+}
+
+.mapWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Footer --- */
+.formFooter {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnSave {
+  background: #0a224a; /* Navy Button */
+  color: white;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.btnSave:hover:not(:disabled) {
+  background: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.btnSave:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.btnQuickCheck {
+  background: none;
+  border: 1px solid #0a224a;
+  color: #0a224a;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .mapSection {
+    order: -1; /* Peta di atas pada HP */
+    min-height: 300px;
+  }
+}

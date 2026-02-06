@@ -1,0 +1,111 @@
+.dashboardContainer {
+  padding: 30px;
+  background-color: #f8fafc;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.welcomeInfo h1 { font-size: 24px; font-weight: 800; color: #1e293b; margin: 0; }
+.welcomeInfo p { font-size: 14px; color: #64748b; margin-top: 5px; }
+
+.btnPrimary {
+  background: #0a224a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px; /* Sesuai desain dashboard lain */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Metrics */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.statCard {
+  padding: 25px;
+  border-radius: 4px;
+  border: 1.5px solid #e2e8f0;
+  background: white;
+}
+
+.statCard p { font-size: 13px; font-weight: 700; color: #475569; text-transform: uppercase; margin-bottom: 12px; }
+.statCard h3 { font-size: 26px; font-weight: 800; color: #1e293b; margin: 0; }
+
+.bgLightPurple { background-color: #dee9ff; }
+.bgSkyBlue     { background-color: #99d6ff; }
+.bgMint        { background-color: #c0ffff; }
+
+/* Grid Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 4px;
+  border: 1.5px solid #e2e8f0;
+}
+
+.cardTitle { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 25px; }
+
+.cardHeaderInline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.viewAllLink {
+  background: none;
+  border: none;
+  color: #5584b4;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Table */
+.tableWrapper { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; }
+.table th { text-align: left; font-size: 11px; color: #94a3b8; text-transform: uppercase; padding: 10px 15px; border-bottom: 1px solid #f1f5f9; }
+.table td { padding: 15px; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+
+.tenantCell { display: flex; flex-direction: column; gap: 2px; }
+.tenantCell strong { color: #1e293b; font-size: 14px; }
+.tenantCell span { color: #94a3b8; font-size: 11px; }
+
+.planName { font-weight: 700; color: #5584b4; }
+
+.statusBadge { padding: 4px 10px; border-radius: 4px; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.active { background: #dcfce7; color: #15803d; }
+.inactive { background: #fee2e2; color: #b91c1c; }
+
+/* Loader */
+.loader { height: 60vh; display: flex; align-items: center; justify-content: center; }
+.loader span { width: 40px; height: 40px; border: 4px solid #f1f5f9; border-top-color: #0a224a; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 1024px) {
+  .metricsGrid { grid-template-columns: 1fr; }
+  .mainGrid { grid-template-columns: 1fr; }
+}

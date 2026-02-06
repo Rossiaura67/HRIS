@@ -1,0 +1,239 @@
+/* Container Utama */
+.container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8fafc; /* Latar belakang lebih soft */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a; /* Slate 900 */
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b; /* Slate 500 */
+}
+
+/* Tombol Tambah Presensi */
+.btnAdd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #00235b;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btnAdd:hover {
+  background-color: #001a44;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 35, 91, 0.2);
+}
+
+/* Card Status Hari Ini */
+.todayCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.todayCardEmpty {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 2px dashed #e2e8f0;
+  border-radius: 16px;
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusGroup label {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeGroup p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+/* Pencarian */
+.tableSection {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.searchBar {
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar svg {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+}
+
+.searchBar input {
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.searchBar input:focus {
+  outline: none;
+  border-color: #00235b;
+  box-shadow: 0 0 0 4px rgba(0, 35, 91, 0.05);
+}
+
+/* Tabel */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th {
+  background-color: #f8fafc;
+  padding: 16px;
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #334155;
+}
+
+.table tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* Status Badges */
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  text-transform: capitalize;
+}
+
+.onTime { background-color: #dcfce7; color: #166534; } /* Green */
+.late { background-color: #fef9c3; color: #854d0e; }   /* Yellow */
+.absent { background-color: #fee2e2; color: #991b1b; } /* Red */
+.sick { background-color: #e0f2fe; color: #075985; }   /* Blue */
+.leave { background-color: #f3e8ff; color: #6b21a8; }  /* Purple */
+
+/* Paginasi */
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.pageButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.pageButtons button {
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.2s;
+}
+
+.pageButtons button:hover:not(:disabled) {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.pageButtons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #64748b;
+  font-weight: 600;
+}

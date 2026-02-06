@@ -1,0 +1,281 @@
+/* --- Root & Global --- */
+.container {
+  padding: 30px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Header Section --- */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.welcomeInfo h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0a224a;
+  margin: 0;
+}
+
+.welcomeInfo p {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.actionGroup {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Buttons --- */
+.btnPrimary {
+  background: #0a224a;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btnPrimary:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 34, 74, 0.2);
+}
+
+.btnBilling {
+  background: white;
+  color: #0a224a;
+  border: 1.5px solid #0a224a;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btnBilling:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* --- Master Plan Cards --- */
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.planCard {
+  padding: 30px 25px;
+  border-radius: 8px; /* Dibuat lebih round */
+  border: 1.5px solid #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.planCard:hover {
+  transform: translateY(-5px);
+  border-color: #0a224a;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.planHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Container untuk tombol Edit & Delete di Card */
+.planActions {
+  display: flex;
+  gap: 8px;
+}
+
+.iconEdit, .iconDelete {
+  background: white;
+  border: 1px solid #e2e8f0;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.iconEdit:hover {
+  background: #0a224a;
+  color: white !important;
+}
+
+.iconDelete:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+.planName {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a224a;
+  margin: 0 0 10px 0;
+}
+
+.planPrice {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0a224a;
+  margin-bottom: 20px;
+}
+
+.planFeature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0a224a;
+}
+
+/* --- Tenant Table Section --- */
+.tableCard {
+  background: white;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: #f8fafc;
+  padding: 15px 25px;
+  text-align: left;
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table td {
+  padding: 18px 25px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Aksi di tabel (Suspend & Delete) */
+.actionCell {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btnAction {
+  background: white;
+  border: 1px solid #e2e8f0;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnAction:hover {
+  background: #f8fafc;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Progress Bar (Usage) --- */
+.usageBar {
+  width: 140px;
+  background: #f1f5f9;
+  height: 10px; /* Dibuat lebih slim agar modern */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.usageFill {
+  background: #0a224a;
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table td small {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* --- Badges --- */
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.active { background: #dcfce7; color: #15803d; }
+.suspended { background: #fef3c7; color: #92400e; }
+.expired, .inactive { background: #fee2e2; color: #b91c1c; }
+
+/* --- Loader --- */
+.loader {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader span {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f1f5f9;
+  border-top-color: #0a224a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .planGrid { grid-template-columns: 1fr; }
+  .actionGroup { width: 100%; flex-direction: column; }
+}
